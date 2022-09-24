@@ -1,10 +1,10 @@
-class Solution
-{
-    public int trailingZeroes(int n)
-    {
-        return n<5 ? 0 : (int)Math.ceil(n/5) + trailingZeroes((int)Math.ceil(n/5));
-    }
-
-    
-    
+class Solution{
+    public int trailingZeroes(int n){
+        int count=0;
+        while(n>0){
+            n/=5;
+            count+=n;
+        }
+        return count;
+    }    
 }
