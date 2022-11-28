@@ -3,7 +3,6 @@ class Solution {
        int i = 0;
         int j = 0;
         int max = 0;
-        
         HashSet<Character> set = new HashSet();
         
         while(j < s.length()) {
@@ -15,8 +14,7 @@ class Solution {
                 set.remove(s.charAt(i));
                 i++;
             }
-        }
-        
+        }     
         return max;
     }
 }
