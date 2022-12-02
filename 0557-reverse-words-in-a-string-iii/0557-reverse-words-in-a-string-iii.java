@@ -1,14 +1,21 @@
 class Solution {
     public String reverseWords(String s) {
-        String arr[]=s.split(" ");
-        String str="";
-        for(int i=0;i<arr.length;i++){
-            for(int j=arr[i].length()-1;j>=0;j--){
-                str+=arr[i].charAt(j);
-            }
-            if(i!=arr.length-1)
-            str+=" ";
-        }
-        return str;
-    }
+       int temp=-1;
+       s=s+" ";
+    String ans="",str="";
+    for(int i=0;i<s.length();i++){
+          if(s.charAt(i)==' '){
+    for(int j=i-1;j>temp;j--){
+        str=str+ s.charAt(j);
+     }
+     temp=i;
+   ans=ans+str+" ";
+   str="";
+   }
+   else
+     continue;
 }
+    ans=ans.trim(); //to remove extra white spaces
+   return ans;
+      }
+    }
