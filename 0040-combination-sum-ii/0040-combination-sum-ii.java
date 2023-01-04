@@ -17,7 +17,7 @@ class Solution {
             if(candidates[i]<=remain){
                 comb.add(candidates[i]);
                 back(remain-candidates[i],comb,i+1,candidates,result);
-                comb.remove(new Integer(candidates[i]) );
+                comb.removeLast();
             }
         }
     }
