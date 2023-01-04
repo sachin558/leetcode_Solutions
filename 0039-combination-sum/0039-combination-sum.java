@@ -2,7 +2,7 @@ class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result=new ArrayList<List<Integer>>();
         LinkedList<Integer> comb=new LinkedList<>();
-        this.back(target,comb,0,candidates,result);
+        back(target,comb,0,candidates,result);
         return result;
     }
     public void back(int remain,LinkedList<Integer> comb,int start,int []candidates,List<List<Integer>> result){
@@ -13,7 +13,7 @@ class Solution {
             return ;
         for(int i=start;i<candidates.length;i++){
             comb.add(candidates[i]);
-            this.back(remain-candidates[i],comb,i,candidates,result);
+            back(remain-candidates[i],comb,i,candidates,result);
             comb.removeLast();
         }
     
