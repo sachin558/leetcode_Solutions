@@ -10,7 +10,7 @@ class Solution {
         if(remain==0) {
                 result.add(new ArrayList<Integer>(comb)); return ;
         }
-        
+        else if(remain<0) return;
         for(int i=start;i<candidates.length;i++){
            if(start!=i && candidates[i]==candidates[i-1])
                continue;
