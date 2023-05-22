@@ -5,8 +5,8 @@ class Solution {
         }
         
         // Count gcd of string lengths
-        var l1 = str1.length();
-        var l2 = str2.length();
+        int l1 = str1.length();
+        int l2 = str2.length();
         while (l1 != l2) {
             if (l1 > l2) l1 -= l2;
             else l2 -= l1;
