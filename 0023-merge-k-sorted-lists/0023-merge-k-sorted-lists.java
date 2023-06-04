@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-              if (lists == null || lists.length == 0) {
+         if (lists == null || lists.length == 0) {
             return null;
         }
         return divide(lists, 0, lists.length - 1);
