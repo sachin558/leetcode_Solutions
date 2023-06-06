@@ -1,13 +1,14 @@
 class Solution {
     public int jump(int[] nums) {
-       int currentmax=0,reachsum=0,jump=0;
+       int jump=0 , currsum=0,des=0;
         for(int i=0;i<nums.length-1;i++){
-            if(i+nums[i]>currentmax){
-                currentmax=i+nums[i];
+            if(nums[i]+i > currsum){
+                currsum=nums[i]+i;
             }
-            if(i==reachsum){
+            if(i == des){
+                
+                des=currsum;
                 jump++;
-                reachsum=currentmax;
             }
         }
         return jump;
