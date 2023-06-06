@@ -6,7 +6,7 @@ class Solution {
             if(max<i+nums[i]){
                 max=nums[i]+i;
             }
-            if(max >=nums.length-1){
+            if(max >= nums.length-1){
                 return true;
             }
         }
