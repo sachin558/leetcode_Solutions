@@ -1,11 +1,11 @@
 class Solution {
     public int countNegatives(int[][] grid) {
         int count=0;
-        for(int i=0;i<grid.length;i++){
-            for (int j=0;j <grid[0].length;j++){
-                if (grid[i][j] <=-1)
-                    count++;
-            }
+       int i=grid[0].length-1;
+        for(var  row:grid){
+            while(i>=0 && row[i] <0)
+                i--;
+            count+=grid[0].length-i-1;
         }
         return count;
     }
