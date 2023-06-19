@@ -1,19 +1,20 @@
 class Solution {
     public List<String> generateParenthesis(int n) {
-      List<String> ans=new ArrayList<>();
-        back("",0,0,ans,n);
-        return ans;
+        List<String> res=new ArrayList<>();
+        tracking("",0,0,res,n);
+        return res;
     }
-    public void back(String curr,int op, int cl , List<String > ans, int n){
-        if(curr.length() ==2*n){
-            ans.add(curr);
+    public void tracking(String curr , int op, int cl, List<String> res,int  n){
+        if(curr.length() == 2*n){
+            res.add(curr);
             return ;
         }
         if(op<n){
-            back(curr+"(",op+1,cl,ans,n);
+            tracking(curr+"(", op+1,cl,res,n);
         }
         if(cl<op){
-            back(curr+")",op,cl+1,ans,n);
+            tracking(curr+")", op,cl+1,res,n);
         }
+
     }
 }
